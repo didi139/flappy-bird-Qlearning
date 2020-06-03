@@ -1,6 +1,6 @@
 # flappy-bird-Qlearning
 
-预览地址1：https://didi139.github.io/flappy-bird-Q-learning/
+预览地址1：https://didi139.github.io/flappy-bird-Q-learning/  
 预览地址2：https://didi139.gitee.io/flappy-bird-Q-learning/
 
 ## 本地搭建
