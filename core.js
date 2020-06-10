@@ -126,8 +126,8 @@ let component = {
         this.draw = function (dye) {
             let s = sprite.location[guide.land.style];
             let d = {x: 0, y: guide.land.y, w: s.w, h: s.h};
-            let sw1 = ((s.x + this.offset) % s.w + s.w) % s.w;
-            let sw2 = s.w - sw1;
+            let sw1 = ((s.x + this.offset) % s.w + s.w) % s.w || 1;
+            let sw2 = s.w - sw1 || 1;
             !dye && canvas.context.drawImage(sprite.atlas, s.x + sw1, s.y, sw2, s.h, d.x, d.y, sw2 / s.w * d.w, d.h);
             !dye && canvas.context.drawImage(sprite.atlas, s.x, s.y, sw1, s.h, d.x + sw2 / s.w * d.w, d.y, sw1 / s.w * d.w, d.h);
             dye && canvas.context.dye(d.x, d.y, d.w, d.h, guide.land.dye.color)
